@@ -13,8 +13,11 @@ public class BookController {
     @GetMapping("/books")
     public List<Book> getBooks() {
         List<Book> books = new ArrayList<>();
-        Book book = new Book();
+        Book book = new Book("Harry Potter");
+        Book book2 = new Book("Le seigneur des anneaux");
+
         books.add(book);
+        books.add(book2);
         return books;
     }
 }
