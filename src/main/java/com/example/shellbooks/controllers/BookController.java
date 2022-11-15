@@ -1,6 +1,6 @@
 package com.example.shellbooks.controllers;
 
-import com.example.shellbooks.model.Book;
+import com.example.shellbooks.model.ViewBook;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,13 +11,13 @@ import java.util.List;
 public class BookController {
 
     @GetMapping("/books")
-    public List<Book> getBooks() {
-        List<Book> books = new ArrayList<>();
-        Book book = new Book("Harry Potter");
-        Book book2 = new Book("Le seigneur des anneaux");
+    public List<ViewBook> getBooks() {
+        List<ViewBook> viewBooks = new ArrayList<>();
+        ViewBook viewBook = new ViewBook("Harry Potter");
+        ViewBook viewBook2 = new ViewBook("Le seigneur des anneaux");
 
-        books.add(book);
-        books.add(book2);
-        return books;
+        viewBooks.add(viewBook);
+        viewBooks.add(viewBook2);
+        return viewBooks;
     }
 }

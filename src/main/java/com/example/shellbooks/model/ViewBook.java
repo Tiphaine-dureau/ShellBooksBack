@@ -1,12 +1,12 @@
 package com.example.shellbooks.model;
 
-public class Book {
+public class ViewBook {
     private String name;
 
-    public Book() {
+    public ViewBook() {
     }
 
-    public Book(String name) {
+    public ViewBook(String name) {
         this.name = name;
     }
 
@@ -20,7 +20,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "ViewBook{" +
                 "name='" + name + '\'' +
                 '}';
     }
