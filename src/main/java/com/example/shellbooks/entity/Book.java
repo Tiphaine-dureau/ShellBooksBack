@@ -1,15 +1,17 @@
 package com.example.shellbooks.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "Book")
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "book_sequence", sequenceName = "book_sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "book_sequence")
+    @Column(name = "id", updatable = false)
     private Long id;
+
+    @Column(name = "name")
     private String name;
 
     public Book() {

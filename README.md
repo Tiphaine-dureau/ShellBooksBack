@@ -6,13 +6,13 @@ Ici est concernée la partie back réalisée avec Java Spring Boot et Maven.
 ## Configuration du Back-end
 
 - Java JDK 17
-- Plugin MAVEN
+- Gestion et automatisation avec MAVEN
 - Spring Boot Starter Web
 - Spring Boot Starter JPA
 - Spring Boot Starter JDBC
-- Liquibase
-- H2 Database (provisoire)
-
+- Liquibase pour le versioning de la base de données
+- Postgres SQL via un container docker : 
+`docker run --name shellbooks-postgres -e POSTGRES_PASSWORD=********* -p 5432:5432  -d postgres`
 
 ## Partie Front
 
