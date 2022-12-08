@@ -19,7 +19,7 @@ public class SecurityConfiguration {
                         .anyRequest().permitAll()
                 )
                 .httpBasic(withDefaults())
-                .csrf().ignoringAntMatchers("/h2-console/**");
+                .csrf().disable();
         http.headers().frameOptions().sameOrigin();
         return http.build();
     }

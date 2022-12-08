@@ -26,4 +26,9 @@ public class BookService {
         }
         return viewBooks;
     }
+    public void createBook(ViewBook book) {
+        Book bookEntity = new Book();
+        bookEntity.setName(book.getName());
+        bookRepository.save(bookEntity);
+    }
 }
